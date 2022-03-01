@@ -21,11 +21,11 @@ public class SpaceTransform : MonoBehaviour
         localObjectTransform.localPosition = WorldToLocal(worldSpacePoint);
     }
 
-    // Vector2 LocalToWorld(Vector2 localPoint)
-    // {
-    //     Vector2 worldOffset = (transform.right * localPoint.x) + (transform.up * localPoint.y);
-    //     return (Vector2)transform.position + worldOffset;
-    // }
+    Vector2 LocalToWorld(Vector2 localPoint)
+    {
+         Vector2 worldOffset = (transform.right * localPoint.x) + (transform.up * localPoint.y);
+         return (Vector2)transform.position + worldOffset;
+    }
     
     Vector2 WorldToLocal(Vector2 worldPoint)
     {
